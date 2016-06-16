@@ -22,7 +22,7 @@ public class ResultsActivity extends Activity  {
         setContentView(R.layout.activity_results);
         Bundle extras = getIntent().getExtras();
         if (extras != null) {
-            result = extras.getString("RESULT");
+            result = extras.getString("RESULT")+"/"+extras.getString("TOTAL");
 
         }
 

@@ -38,6 +38,7 @@ public class NormalActivity extends Activity
 
     String currentSolution;
     int result;
+    int totalRandoms;
     View contentView;
     ProgressBar mProgressBar;
     CountDownTimer mCountDownTimer;
@@ -80,11 +81,13 @@ public class NormalActivity extends Activity
                 timer_i++;
                 mProgressBar.setProgress(timer_i);
                 Log.v("wynik gry = ", String.valueOf(result));
+                Log.v("total = ", String.valueOf(totalRandoms));
 
                 // startujemy intent z wynikami
                 Intent intent = new Intent(NormalActivity.this, ResultsActivity.class);
                 intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                 intent.putExtra("RESULT", String.valueOf(result));
+                intent.putExtra("TOTAL", String.valueOf(totalRandoms));
                 startActivity(intent);
 ;
             }
@@ -96,9 +99,10 @@ public class NormalActivity extends Activity
     public void nextQuestion(View view)
     {
         TextView t = (TextView)view;
+        totalRandoms ++;
         if(currentSolution == t.getText())
             result +=1;
-        System.out.println("result = "+ result);
+      //  System.out.println("result = "+ result);
         randomizeColors();
     }
 
