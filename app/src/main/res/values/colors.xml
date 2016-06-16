@@ -5,49 +5,129 @@
     <color name="colorAccent">#FF4081</color>
     
     <color name="black">#000000</color>
+    <color name="antiBlack">#FFFFFF</color>
     <color name="white">#ffffff</color>
+    <color name="antiWhite">#000000</color>
+
     <!-- basic colors -->
     <color name="red">#ff0000</color>
+    <color name="sntiRed">#00FFFF</color>
+
     <color name="pink">#ffc0cb</color>
+    <color name="antiPink">#003F34</color>
+
     <color name="orange">#ffa500</color>
+    <color name="antiOrange">#005AFF</color>
+
     <color name="yellow">#ffff00</color>
+    <color name="antiYellow">#0000FF</color>
+
     <color name="green">#00ff00</color>
+    <color name="antiGreen">#FF00FF</color>
+
     <color name="blue">#0000ff</color>
+    <color name="antiBlue">#FFFF00</color>
+
     <color name="purple">#800080</color>
+    <color name="antiPurple">#7FFF7F</color>
+
     <color name="brown">#a52a2a</color>
+    <color name="antiBrown">#5AD5D5</color>
+
     <color name="grey">#808080</color>
+    <color name="antiGrey">#7F7F7F</color>
 
     <!-- white colors -->
     <color name="beige">#F5F5DC</color>
+    <color name="antiBeige">#0A0A23</color>
+
 
     <!-- red colors -->
     <color name="crimson">#DC143C</color>
+    <color name="antiCrimson">#23EBC3</color>
+
+
     <color name="salmon">#fa8072</color>
+    <color name="antiSalmon">#057F8D</color>
     <!-- orange colors -->
     <color name="coral">#ff7f50</color>
+    <color name="antiCoral">#0080AF</color>
+
     <!-- yellow colors -->
     <color name="khaki">#F0E68C</color>
+    <color name="antiKhaki">#0F1973</color>
+
     <color name="gold">#FFD700</color>
+    <color name="antiGold">#0028FF</color>
+
     <color name="lemon">#FFFACD</color>
+    <color name="antiLemon">#000532</color>
+
     <!-- green colors -->
     <color name="chartreuse">#7fff00</color>
+    <color name="antiChartreuse">#8000FF</color>
+
     <color name="lime">#00ff00</color>
+    <color name="antiLime">#FF00FF</color>
+
     <color name="aquamarine">#7fffd4</color>
+    <color name="antiAquamarine">#80002B</color>
+
+
     <color name="dark_green">#006600</color>
+    <color name="antiDark_green">#FF99FF</color>
+
     <color name="olive">#808000</color>
+    <color name="antiOlive">#7F7FFF</color>
+
     <color name="teal">#008080</color>
+    <color name="antiTeal">#FF7F7F</color>
+
     <!-- blue colors -->
     <color name="turqoise">#40e0d0</color>
+    <color name="antiTurqoise">#BF1F2F</color>
+
+
     <color name="cyan">#00ffff</color>
+    <color name="antiCyan">#FF0000</color>
+
+
     <color name="navy">#000080</color>
+    <color name="antiNavy">#FFFF7F</color>
+
+
     <!-- purple colors -->
     <color name="violet">#ee82</color>
+
+
     <color name="lavender">#e6e6fa</color>
+    <color name="antiLavender">#191905</color>
+
+
     <color name="magenta">#ff00ff</color>
+    <color name="antiMagenta">#00FF00</color>
+
+
     <color name="indigo">#4b0082</color>
+    <color name="antiIndigo">#B4FF7D</color>
+
+
     <!-- brown colors -->
     <color name="wheat">#F5DEB3</color>
+    <color name="antiWheat">#0A214C</color>
+
+
     <color name="tan">#D2B48C</color>
+    <color name="antiTan">#2D4B73</color>
+
+
     <color name="chocolate">#D2691E</color>
+    <color name="antiChocolate">#2D96E1</color>
+
+
     <color name="maroon">#800000</color>
+    <color name="antiMaroon">#7FFFFF</color>
+
+
+
 </resources>
