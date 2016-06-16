@@ -69,20 +69,13 @@ public class NormalActivity extends Activity
                 timer_i++;
                 mProgressBar.setProgress(timer_i);
                 Log.v("wynik gry = ", String.valueOf(result));
+
+                // startujemy intent z wynikami
                 Intent intent = new Intent(NormalActivity.this, ResultsActivity.class);
                 intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                intent.putExtra("RESULT", String.valueOf(result));
                 startActivity(intent);
-//                handler.post(new Runnable() {
-//                    @Override
-//                    public void run() {
-//                        normalActivity.finishActivity(0);
-//                        startActivity(resultIntent);
-//                    }
-//                });
-
-              //  NormalActivity.this.onNewIntent(resultIntent);
-//                finish();
-//                startActivity(resultIntent);
+;
             }
         };
         mCountDownTimer.start();
