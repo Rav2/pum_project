@@ -16,6 +16,7 @@ public class ResultsActivity extends Activity  {
     private String result = "";
     private String username = "";
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,6 +24,7 @@ public class ResultsActivity extends Activity  {
         Bundle extras = getIntent().getExtras();
         if (extras != null) {
             result = extras.getString("RESULT")+"/"+extras.getString("TOTAL");
+            username=extras.getString("USERNAME");
 
         }
 
@@ -34,6 +36,7 @@ public class ResultsActivity extends Activity  {
 
     public void playAgain(View view){
         Intent levelIntent = new Intent(this, DifficultyLevelActivity.class);
+        levelIntent.putExtra("USERNAME",username);
         startActivity(levelIntent);
     }
 
@@ -42,53 +45,7 @@ public class ResultsActivity extends Activity  {
         startActivity(exitIntent);
     }
 
-    public void saveData(View view){
-        String dataToSave = "";
-        EditText nameEditText = (EditText) findViewById(R.id.nameEditText);
-        username = String.valueOf(nameEditText.getText());
-        if (username.equals("nazwa użytkownika")|| username.equals("")){
-            Log.v("uwaga! ", "niepprawne dane");
-            // dialog wskazujący na niepoprawnie wpisane dane
-            //takich nie możemy wpisać do bazy danych
-            AlertDialog.Builder builder1 = new AlertDialog.Builder(this);
-            builder1.setTitle("Uwaga!");
-            builder1.setMessage("Proszę podać poprawne dane!");
-            builder1.setCancelable(true);
 
-            builder1.setPositiveButton(
-                    "OK",
-                    new DialogInterface.OnClickListener() {
-                        public void onClick(DialogInterface dialog, int id) {
-                            dialog.cancel();
-                        }
-                    });
-
-//            builder1.setNegativeButton(
-//                    "No",
-//                    new DialogInterface.OnClickListener() {
-//                        public void onClick(DialogInterface dialog, int id) {
-//                            dialog.cancel();
-//                        }
-//                    });
-
-            AlertDialog alert11 = builder1.create();
-            alert11.show();
-        }
-        else{
-            // zapisujemy dane do bazy danych
-            dataToSave = username +": "+result;
-            Log.v("DB: ", dataToSave);
-
-        }
-
-
-
-
-        // zaimplementować zachowanie danych do BD
-        // dane w postaci: username + result jako string
-
-
-    }
 
 
 

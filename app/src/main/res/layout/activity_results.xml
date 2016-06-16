@@ -31,7 +31,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Wynik: "
+        android:text="Result: "
         android:textSize="12pt"
         android:id="@+id/resulttextView"
 
@@ -56,32 +56,13 @@
 
         android:layout_alignParentTop="true"/>
         </RelativeLayout>
-        <EditText
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:inputType="text"
-            android:ems="14"
-            android:layout_gravity="center"
-            android:id="@+id/nameEditText"
-            android:textStyle="italic"
-            android:text="nazwa użytkownika"/>
 
-        <Button
-            android:layout_width="160dp"
-            android:layout_height="wrap_content"
-            android:text="Zapisz dane"
-            android:id="@+id/saveDataBtn"
-            android:layout_gravity="center"
-            android:layout_margin="10px"
-            android:textSize="10pt"
-            android:background="@color/button_material_light"
-            android:textColor="@color/abc_primary_text_disable_only_material_light"
-            android:onClick="saveData"/>
+
 
     <Button
         android:layout_width="160dp"
         android:layout_height="wrap_content"
-        android:text="Jeszcze raz"
+        android:text="Play again"
         android:id="@+id/againBtn"
         android:layout_gravity="center"
         android:layout_margin="10px"
@@ -93,7 +74,7 @@
     <Button
         android:layout_width="160dp"
         android:layout_height="wrap_content"
-        android:text="Wyjdź"
+        android:text="Exit"
         android:id="@+id/exitBtn"
         android:layout_gravity="center"
         android:layout_margin="10px"

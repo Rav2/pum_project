@@ -43,12 +43,23 @@ public class NormalActivity extends Activity
     ProgressBar mProgressBar;
     CountDownTimer mCountDownTimer;
     int timer_i=0;
+    String username = "";
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
+
+        Bundle extras = getIntent().getExtras();
+        if (extras != null) {
+            username = extras.getString("USERNAME");
+            Log.i("username: ", username);
+
+        }
+
+
+
         result = 0;
         setContentView(R.layout.activity_normal);
         colorList = new String[]{"brown", "black", "yellow", "red", "blue", "green", "pink", "purple", "orange", "beige"};
@@ -68,7 +79,7 @@ public class NormalActivity extends Activity
 
             @Override
             public void onTick(long millisUntilFinished) {
-                Log.v("Log_tag", "Tick of Progress" + timer_i + millisUntilFinished);
+             //   Log.v("Log_tag", "Tick of Progress" + timer_i + millisUntilFinished);
                 timer_i++;
                 mProgressBar.setProgress(timer_i);
 
@@ -80,14 +91,15 @@ public class NormalActivity extends Activity
                 //Do what you want
                 timer_i++;
                 mProgressBar.setProgress(timer_i);
-                Log.v("wynik gry = ", String.valueOf(result));
-                Log.v("total = ", String.valueOf(totalRandoms));
+               // Log.v("result = ", String.valueOf(result));
+               // Log.v("total = ", String.valueOf(totalRandoms));
 
                 // startujemy intent z wynikami
                 Intent intent = new Intent(NormalActivity.this, ResultsActivity.class);
                 intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                 intent.putExtra("RESULT", String.valueOf(result));
                 intent.putExtra("TOTAL", String.valueOf(totalRandoms));
+                intent.putExtra("USERNAME",username);
                 startActivity(intent);
 ;
             }
@@ -132,8 +144,6 @@ public class NormalActivity extends Activity
         //ustawiamy napisy na przyciskach
         TextView t1=(TextView)findViewById(R.id.answ1);
         t1.setText(colorList[currentColors.get(0)]);
-      //  t1.setBackgroundColor(antiColorList[currentColors.get(0)]);
-        System.out.println("get 0 : "+currentColors.get(0).toString());
         TextView t2=(TextView)findViewById(R.id.answ2);
         t2.setText(colorList[currentColors.get(1)]);
         TextView t3=(TextView)findViewById(R.id.answ3);
@@ -152,11 +162,6 @@ public class NormalActivity extends Activity
         bt1bd3.setBackgroundColor(getResources().getColor(colorRefList[currentColors.get(5)]));
         bt1bd4.setBackgroundColor(getResources().getColor(colorRefList[currentColors.get(5)]));
 
-//
-//        bt1bd1.setBackgroundColor(getResources().getColor(colorRefList[currentColors.get(5)]));
-//        bt1bd2.setBackgroundColor(getResources().getColor(colorRefList[currentColors.get(5)]));
-//        bt1bd3.setBackgroundColor(getResources().getColor(colorRefList[currentColors.get(5)]));
-//        bt1bd4.setBackgroundColor(getResources().getColor(colorRefList[currentColors.get(5)]));
 
 
         View bt2bd1 = findViewById(R.id.bt2bdUP);

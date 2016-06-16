@@ -17,8 +17,10 @@ public class MainActivity extends Activity
 
     public void play(View view)
     {
-        Intent levelIntent = new Intent(this, DifficultyLevelActivity.class);
-        startActivity(levelIntent);
+        Intent registerIntent = new Intent(this, RegisterActivity.class);
+        startActivity(registerIntent);
+//        Intent levelIntent = new Intent(this, DifficultyLevelActivity.class);
+//        startActivity(levelIntent);
     }
 
     public void ranks(View view)
