@@ -3,6 +3,8 @@ package com.example.rafalmaselek.colorfun;
 import android.app.Activity;
 import android.os.Bundle;
 
+import com.example.rafalmaselek.colorfun.R;
+
 public class HardActivity extends Activity
 {
 

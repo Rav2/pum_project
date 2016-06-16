@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">ColorFun</string>
+    <string name="result_text">Wynik</string>
 </resources>

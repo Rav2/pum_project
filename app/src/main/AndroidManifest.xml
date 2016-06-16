@@ -22,10 +22,13 @@
         <activity android:name=".EasyActivity"
                   android:screenOrientation="portrait">
         </activity>
-        <activity android:name=".NormalActivity"
+        <activity android:name=".NormalActivity"  android:noHistory="true"
             android:screenOrientation="portrait">
         </activity>
         <activity android:name=".HardActivity"
+                  android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".ResultsActivity"
                   android:screenOrientation="portrait">
         </activity>
     </application>

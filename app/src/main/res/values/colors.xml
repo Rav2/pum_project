@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimary">#3f51b5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
     
@@ -24,7 +24,7 @@
     <color name="crimson">#DC143C</color>
     <color name="salmon">#fa8072</color>
     <!-- orange colors -->
-    <color name="coral">#FF7F50</color>
+    <color name="coral">#ff7f50</color>
     <!-- yellow colors -->
     <color name="khaki">#F0E68C</color>
     <color name="gold">#FFD700</color>
@@ -33,7 +33,7 @@
     <color name="chartreuse">#7fff00</color>
     <color name="lime">#00ff00</color>
     <color name="aquamarine">#7fffd4</color>
-    <color name="dark_green">#006400</color>
+    <color name="dark_green">#006600</color>
     <color name="olive">#808000</color>
     <color name="teal">#008080</color>
     <!-- blue colors -->

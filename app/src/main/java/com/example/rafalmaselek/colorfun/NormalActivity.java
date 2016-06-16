@@ -2,6 +2,7 @@ package com.example.rafalmaselek.colorfun;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.content.res.Resources;
 import android.database.Cursor;
 import android.graphics.Color;
@@ -10,6 +11,7 @@ import android.os.CountDownTimer;
 import android.os.Handler;
 import android.support.v4.content.ContextCompat;
 import android.util.Log;
+import android.view.ActionMode;
 import android.view.View;
 import android.widget.ProgressBar;
 import android.widget.TextView;
@@ -20,6 +22,9 @@ import java.util.Random;
 
 public class NormalActivity extends Activity
 {
+
+   // Intent resultIntent = new Intent(this, ResultsActivity.class);
+   // Handler handler;
     int[] colorRefList;
     protected int numberOfColors;
     String[] colorList;
@@ -58,9 +63,26 @@ public class NormalActivity extends Activity
             }
             @Override
             public void onFinish() {
+
+                // tutaj musimy startować intent wynik i zagraj ponownie
                 //Do what you want
                 timer_i++;
                 mProgressBar.setProgress(timer_i);
+                Log.v("wynik gry = ", String.valueOf(result));
+                Intent intent = new Intent(NormalActivity.this, ResultsActivity.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                startActivity(intent);
+//                handler.post(new Runnable() {
+//                    @Override
+//                    public void run() {
+//                        normalActivity.finishActivity(0);
+//                        startActivity(resultIntent);
+//                    }
+//                });
+
+              //  NormalActivity.this.onNewIntent(resultIntent);
+//                finish();
+//                startActivity(resultIntent);
             }
         };
         mCountDownTimer.start();
@@ -72,6 +94,7 @@ public class NormalActivity extends Activity
         TextView t = (TextView)view;
         if(currentSolution == t.getText())
             result +=1;
+        System.out.println("result = "+ result);
         randomizeColors();
     }
 
@@ -157,4 +180,6 @@ public class NormalActivity extends Activity
 
 
     }
+
+
 }
