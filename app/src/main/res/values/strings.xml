@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">ColorFun</string>
     <string name="result_text">Wynik</string>
+    <string name="dialog_fire_missiles"/>
+    <string name="ok">OK</string>
+    <string name="dialog_wrong_data">Proszę podać poprawne dane!</string>
 </resources>
