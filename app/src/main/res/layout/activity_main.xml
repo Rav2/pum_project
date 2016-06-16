@@ -45,7 +45,9 @@
             android:text="quit"            
             android:textSize="24pt"
             android:layout_margin="10px"
-            android:layout_gravity="center"/>
+            android:layout_gravity="center"
+            android:onClick="quit"
+            />
 
     </LinearLayout>
 </RelativeLayout>

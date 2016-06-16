@@ -26,4 +26,9 @@ public class MainActivity extends Activity
         Intent ranksIntent = new Intent(this, RanksActivity.class);
         startActivity(ranksIntent);
     }
+
+    public void quit(View view)
+    {
+        this.finish();
+    }
 }
