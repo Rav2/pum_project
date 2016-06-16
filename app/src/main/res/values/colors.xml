@@ -11,7 +11,7 @@
 
     <!-- basic colors -->
     <color name="red">#ff0000</color>
-    <color name="sntiRed">#00FFFF</color>
+    <color name="antiRed">#00FFFF</color>
 
     <color name="pink">#ffc0cb</color>
     <color name="antiPink">#003F34</color>

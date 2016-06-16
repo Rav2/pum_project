@@ -26,9 +26,16 @@ public class NormalActivity extends Activity
    // Intent resultIntent = new Intent(this, ResultsActivity.class);
    // Handler handler;
     int[] colorRefList;
+    int[] antiColorRefList;
+
     protected int numberOfColors;
     String[] colorList;
+    String[] antiColorList;
+
+
     ArrayList<Integer> currentColors;
+    ArrayList<Integer> antiCurrentColors;
+
     String currentSolution;
     int result;
     View contentView;
@@ -44,9 +51,13 @@ public class NormalActivity extends Activity
         result = 0;
         setContentView(R.layout.activity_normal);
         colorList = new String[]{"brown", "black", "yellow", "red", "blue", "green", "pink", "purple", "orange", "beige"};
+        antiColorList = new String[]{"antiBrown", "antiBlack", "antiYellow", "antiRed", "antiBlue", "antiGreen", "antiPink", "antiPurple", "antiOrange", "antiBeige"};
+
         numberOfColors = colorList.length;
         colorRefList = new int[]{R.color.brown, R.color.black, R.color.yellow, R.color.red, R.color.blue, R.color.green,
         R.color.pink, R.color.purple, R.color.orange, R.color.beige};
+        antiColorRefList = new int[]{R.color.antiBrown, R.color.antiBlack, R.color.antiYellow, R.color.antiRed, R.color.antiBlue, R.color.antiGreen,
+                R.color.antiPink, R.color.antiPurple, R.color.antiOrange, R.color.antiBeige};
         contentView = this.findViewById(android.R.id.content);
         randomizeColors();
         mProgressBar=(ProgressBar)findViewById(R.id.progressbar);
@@ -96,6 +107,7 @@ public class NormalActivity extends Activity
         Random r = new Random();
         int colorNo;
         currentColors = new ArrayList<Integer>(numberOfColors); //lista kolorow uzywanych w danej chwili na ekranie
+     //   antiCurrentColors = new ArrayList<Integer>(numberOfColors);
         for(int ii=0; ii<9; ii++)
         {
             colorNo = (r.nextInt(numberOfColors));
@@ -105,7 +117,9 @@ public class NormalActivity extends Activity
             }
             while(currentColors.contains(colorNo));
             currentColors.add(colorNo);
+          //  antiCurrentColors.add(colorNo);
         }
+        Log.v("currenList= ",currentColors.toString());
 
         int solution = currentColors.get(r.nextInt(3)+1);
         currentSolution = colorList[solution];  //rozwiazaniem jest jeden z pierwszych 4 kolorow
@@ -114,6 +128,8 @@ public class NormalActivity extends Activity
         //ustawiamy napisy na przyciskach
         TextView t1=(TextView)findViewById(R.id.answ1);
         t1.setText(colorList[currentColors.get(0)]);
+      //  t1.setBackgroundColor(antiColorList[currentColors.get(0)]);
+        System.out.println("get 0 : "+currentColors.get(0).toString());
         TextView t2=(TextView)findViewById(R.id.answ2);
         t2.setText(colorList[currentColors.get(1)]);
         TextView t3=(TextView)findViewById(R.id.answ3);
@@ -125,11 +141,20 @@ public class NormalActivity extends Activity
         View bt1bd2 = findViewById(R.id.bt1bdRI);
         View bt1bd3 = findViewById(R.id.bt1bdLE);
         View bt1bd4 = findViewById(R.id.bt1bdDO);
+
+
         bt1bd1.setBackgroundColor(getResources().getColor(colorRefList[currentColors.get(5)]));
         bt1bd2.setBackgroundColor(getResources().getColor(colorRefList[currentColors.get(5)]));
         bt1bd3.setBackgroundColor(getResources().getColor(colorRefList[currentColors.get(5)]));
         bt1bd4.setBackgroundColor(getResources().getColor(colorRefList[currentColors.get(5)]));
-        //////////////////
+
+//
+//        bt1bd1.setBackgroundColor(getResources().getColor(colorRefList[currentColors.get(5)]));
+//        bt1bd2.setBackgroundColor(getResources().getColor(colorRefList[currentColors.get(5)]));
+//        bt1bd3.setBackgroundColor(getResources().getColor(colorRefList[currentColors.get(5)]));
+//        bt1bd4.setBackgroundColor(getResources().getColor(colorRefList[currentColors.get(5)]));
+
+
         View bt2bd1 = findViewById(R.id.bt2bdUP);
         View bt2bd2 = findViewById(R.id.bt2bdRI);
         View bt2bd3 = findViewById(R.id.bt2bdLE);
@@ -157,6 +182,7 @@ public class NormalActivity extends Activity
 
         //ustawiamy kolory tekstu na przyciskach, inne niz kolor rozwiazania
         currentColors = new ArrayList<Integer>(4);
+        antiCurrentColors = new ArrayList<Integer>(4);
         for(int ii=0; ii<4; ii++)
         {
             do
@@ -165,11 +191,23 @@ public class NormalActivity extends Activity
             }
             while(colorNo == solution || currentColors.contains((colorRefList[colorNo])));//currentColors.isEmpty() || !currentColors.contains(colorNo));
             currentColors.add(colorRefList[colorNo]);
+            antiCurrentColors.add(antiColorRefList[colorNo]);
         }
+
+
         t1.setTextColor(getResources().getColor(currentColors.get(0)));
+        t1.setBackgroundColor(getResources().getColor(antiCurrentColors.get(0)));
+
         t2.setTextColor(getResources().getColor(currentColors.get(1)));
+        t2.setBackgroundColor(getResources().getColor(antiCurrentColors.get(1)));
+
+
         t3.setTextColor(getResources().getColor(currentColors.get(2)));
+        t3.setBackgroundColor(getResources().getColor(antiCurrentColors.get(2)));
+
         t4.setTextColor(getResources().getColor(currentColors.get(3)));
+        t4.setBackgroundColor(getResources().getColor(antiCurrentColors.get(3)));
+
 
 
     }
