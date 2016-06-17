@@ -42,6 +42,7 @@ public class ResultsActivity extends Activity  {
 
     public void exit(View view){
         Intent exitIntent = new Intent(this, MainActivity.class);
+        exitIntent.putExtra("USERNAME",username);
         startActivity(exitIntent);
     }
 

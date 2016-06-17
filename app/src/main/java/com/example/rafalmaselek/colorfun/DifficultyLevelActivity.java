@@ -2,6 +2,7 @@ package com.example.rafalmaselek.colorfun;
 
 import android.content.Intent;
 import android.app.Activity;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -9,6 +10,7 @@ import android.view.View;
 public class DifficultyLevelActivity extends Activity
 {
 
+    private static final int AUTHORIZING_DIALOG = 2;
     String username;
 
     @Override
@@ -43,5 +45,30 @@ public class DifficultyLevelActivity extends Activity
         Intent hardGame = new Intent(this, HardActivity.class);
         startActivity(hardGame);
     }
+
+//    class LoginProgressTask extends AsyncTask<String, Integer, Boolean> {
+//        @Override
+//        protected Boolean doInBackground(String... params) {
+//            try {
+//                Thread.sleep(4000);  // Do your real work here
+//            } catch (InterruptedException e) {
+//                e.printStackTrace();
+//            }
+//            return Boolean.TRUE;   // Return your real result here
+//        }
+//        @Override
+//        protected void onPreExecute() {
+//            showDialog(AUTHORIZING_DIALOG);
+//        }
+//        @Override
+//        protected void onPostExecute(Boolean result) {
+//            // result is the value returned from doInBackground
+//            removeDialog(AUTHORIZING_DIALOG);
+//            Intent normalGame = new Intent(this, NormalActivity.class);
+//            normalGame.putExtra("USERNAME",username);
+//            startActivity(normalGame);w
+//        }
+//    }
+
 
 }

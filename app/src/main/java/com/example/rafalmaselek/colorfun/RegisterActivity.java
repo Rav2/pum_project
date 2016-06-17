@@ -14,21 +14,32 @@ import android.widget.EditText;
  */
 public class RegisterActivity extends Activity {
     private String username = "";
+    EditText nameEditText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
+        nameEditText = (EditText) findViewById(R.id.nameEditText);
+
+        Bundle extras = getIntent().getExtras();
+        if (extras != null) {
+            username = extras.getString("USERNAME");
+            Log.i("username: ", username);
+            nameEditText.setText(username);
+
+
+        }
+
     }
 
     public void saveData(View view){
         String dataToSave = "";
-        EditText nameEditText = (EditText) findViewById(R.id.nameEditText);
 
         username = String.valueOf(nameEditText.getText());
         nameEditText.setTextKeepState(username);
-        if (username.equals("player")|| username.equals("")){
+        if ( username.equals("")){
             Log.v("Warning! ", "wrong data");
             // dialog wskazujący na niepoprawnie wpisane dane
             //takich nie możemy wpisać do bazy danych
