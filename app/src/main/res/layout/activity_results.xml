@@ -60,25 +60,25 @@
 
 
     <Button
-        android:layout_width="160dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Play again"
+        android:text="play again"
         android:id="@+id/againBtn"
         android:layout_gravity="center"
         android:layout_margin="10px"
-        android:textSize="10pt"
+        android:textSize="24pt"
         android:background="@color/button_material_light"
         android:textColor="@color/abc_primary_text_disable_only_material_light"
         android:onClick="playAgain"/>
 
     <Button
-        android:layout_width="160dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Exit"
+        android:text="exit"
         android:id="@+id/exitBtn"
         android:layout_gravity="center"
         android:layout_margin="10px"
-        android:textSize="10pt"
+        android:textSize="24pt"
         android:textColor="@color/abc_input_method_navigation_guard"
         android:background="@color/button_material_light"
         android:onClick="exit"/>

@@ -137,7 +137,7 @@ public class NormalActivity extends Activity
         }
         Log.v("currenList= ",currentColors.toString());
 
-        int solution = currentColors.get(r.nextInt(3)+1);
+        int solution = currentColors.get(r.nextInt(4));
         currentSolution = colorList[solution];  //rozwiazaniem jest jeden z pierwszych 4 kolorow
         View square = findViewById(R.id.squareView);
         square.setBackgroundColor(getResources().getColor(colorRefList[solution]));//colorRefList[solution]); //ustawiamy kolor kwadratu

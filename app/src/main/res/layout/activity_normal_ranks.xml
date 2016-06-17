@@ -23,28 +23,22 @@
             android:layout_height="150dp"
             android:id="@+id/imageView1"
             android:src="@drawable/cf3"/>
-        <Button
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="easy"
+            android:text="Results:"
             android:layout_margin="10px"
             android:textSize="24pt"
             android:layout_gravity="center"/>
-        <Button
+        <ListView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="normal"
-            android:layout_margin="10px"
-            android:textSize="24pt"
-            android:layout_gravity="center"
-            android:onClick="normalRanks"/>
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="hard"
-            android:layout_margin="10px"
-            android:textSize="24pt"
-            android:layout_gravity="center"/>
+            android:id="@+id/results_list"/>
 
     </LinearLayout>
 </RelativeLayout>
+
+
+
+
+

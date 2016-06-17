@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest package="com.example.rafalmaselek.colorfun"
-          xmlns:android="http://schemas.android.com/apk/res/android">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.rafalmaselek.colorfun">
 
     <application
         android:allowBackup="true"
@@ -10,30 +10,34 @@
         android:theme="@style/AppTheme">
         <activity android:name=".MainActivity">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
+                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER"/>
+                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".DifficultyLevelActivity">
-        </activity>
-        <activity android:name=".RanksActivity">
-        </activity>
-        <activity android:name=".EasyActivity"
-                  android:screenOrientation="portrait">
-        </activity>
-        <activity android:name=".NormalActivity"  android:noHistory="true"
-            android:screenOrientation="portrait">
-        </activity>
-        <activity android:name=".HardActivity"
-                  android:screenOrientation="portrait">
-        </activity>
-        <activity android:name=".ResultsActivity"
-                  android:screenOrientation="portrait">
-        </activity>
-        <activity android:name=".RegisterActivity"
-                  android:screenOrientation="portrait">
-        </activity>
+        <activity android:name=".DifficultyLevelActivity" />
+        <activity android:name=".RanksActivity" />
+        <activity
+            android:name=".EasyActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".NormalActivity"
+            android:noHistory="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".HardActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ResultsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".RegisterActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".NormalDatabase" />
+        <activity
+            android:name=".NormalRanksActivity"
+            android:label="@string/title_activity_normal_ranks"
+            android:theme="@style/AppTheme.NoActionBar" />
     </application>
 
 </manifest>

@@ -4,6 +4,8 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -24,13 +26,17 @@ public class ResultsActivity extends Activity  {
         Bundle extras = getIntent().getExtras();
         if (extras != null) {
             result = extras.getString("RESULT")+"/"+extras.getString("TOTAL");
-            username=extras.getString("USERNAME");
+            username = extras.getString("USERNAME");
 
         }
 
-        Log.i("pobieram:  ",result);
+        Log.i("pobieram:  ", result);
         EditText resultEditText = (EditText) findViewById(R.id.resultEditText);
         resultEditText.setText(result);
+        NormalDatabase Ndb = new NormalDatabase(this, null, null, 0);
+
+        Ndb.addResult(username, Integer.parseInt(extras.getString("RESULT")), Integer.parseInt(extras.getString("TOTAL")));
+
 
     }
 
@@ -54,15 +60,18 @@ public class ResultsActivity extends Activity  {
     @Override
     protected void onDestroy() {
         super.onDestroy();
+
+            finish();
+
+
     }
 
 
     @Override
     protected void onStop() {
         super.onStop();
+        this.finish();
     }
-
-
     @Override
     protected void onPause() {
         super.onPause();

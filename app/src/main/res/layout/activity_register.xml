@@ -60,16 +60,17 @@
 
 
         <Button
-            android:layout_width="160dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="OK"
+            android:text="ok"
             android:id="@+id/confirmBtn"
             android:layout_gravity="center"
             android:layout_margin="10px"
-            android:textSize="10pt"
+            android:textSize="24pt"
             android:textColor="@color/abc_input_method_navigation_guard"
             android:background="@color/button_material_light"
             android:onClick="saveData"/>
+
 
     </LinearLayout>
 </RelativeLayout>

@@ -1,5 +1,5 @@
 package com.example.rafalmaselek.colorfun;
-//komentarz
+
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -40,6 +40,7 @@ public class MainActivity extends Activity
 
     public void quit(View view)
     {
-        this.finish();
+        finish();
+        System.exit(0);
     }
 }
