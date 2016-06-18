@@ -33,9 +33,9 @@
         <activity
             android:name=".RegisterActivity"
             android:screenOrientation="portrait" />
-        <activity android:name=".NormalDatabase" />
+
         <activity
-            android:name=".NormalRanksActivity"
+            android:name=".LevelRanksActivity"
             android:label="@string/title_activity_normal_ranks"
             android:theme="@style/AppTheme.NoActionBar" />
     </application>

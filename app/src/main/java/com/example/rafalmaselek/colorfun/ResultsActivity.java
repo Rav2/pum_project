@@ -1,11 +1,7 @@
 package com.example.rafalmaselek.colorfun;
 
 import android.app.Activity;
-import android.app.AlertDialog;
-import android.content.DialogInterface;
 import android.content.Intent;
-import android.database.Cursor;
-import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -33,9 +29,9 @@ public class ResultsActivity extends Activity  {
         Log.i("pobieram:  ", result);
         EditText resultEditText = (EditText) findViewById(R.id.resultEditText);
         resultEditText.setText(result);
-        NormalDatabase Ndb = new NormalDatabase(this, null, null, 0);
-
-        Ndb.addResult(username, Integer.parseInt(extras.getString("RESULT")), Integer.parseInt(extras.getString("TOTAL")));
+        Database Ndb = new Database(this, null, null, 0);
+        Log.i("Level:  ", extras.getString("LEVEL"));
+        Ndb.addResult(username, Integer.parseInt(extras.getString("RESULT")), Integer.parseInt(extras.getString("TOTAL")), extras.getString("LEVEL"));
 
 
     }

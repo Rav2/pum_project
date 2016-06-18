@@ -100,6 +100,7 @@ public class NormalActivity extends Activity
                 intent.putExtra("RESULT", String.valueOf(result));
                 intent.putExtra("TOTAL", String.valueOf(totalRandoms));
                 intent.putExtra("USERNAME",username);
+                intent.putExtra("LEVEL", "NORMAL");
                 startActivity(intent);
 ;
             }

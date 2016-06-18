@@ -30,19 +30,21 @@ public class DifficultyLevelActivity extends Activity
     public void easy(View view)
     {
         Intent easyGame = new Intent(this, EasyActivity.class);
+        easyGame.putExtra("USERNAME", username);
         startActivity(easyGame);
     }
 
     public void normal(View view)
     {
         Intent normalGame = new Intent(this, NormalActivity.class);
-        normalGame.putExtra("USERNAME",username);
+        normalGame.putExtra("USERNAME", username);
         startActivity(normalGame);
     }
 
     public void hard(View view)
     {
         Intent hardGame = new Intent(this, HardActivity.class);
+        hardGame.putExtra("USERNAME", username);
         startActivity(hardGame);
     }
 
