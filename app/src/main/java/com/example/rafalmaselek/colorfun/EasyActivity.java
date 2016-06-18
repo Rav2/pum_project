@@ -197,17 +197,20 @@ public class EasyActivity extends Activity
 
 
         t1.setTextColor(getResources().getColor(colorRefList[currentColors.get(0)]));
-        t1.setBackgroundColor(getResources().getColor(antiColorRefList[currentColors.get(0)]));
+        //t1.setBackgroundColor(getResources().getColor(antiColorRefList[currentColors.get(0)]));
+        t1.setBackgroundColor(getResources().getColor(R.color.white));
 
         t2.setTextColor(getResources().getColor(colorRefList[currentColors.get(1)]));
-        t2.setBackgroundColor(getResources().getColor(antiColorRefList[currentColors.get(1)]));
+        //t2.setBackgroundColor(getResources().getColor(antiColorRefList[currentColors.get(1)]));
+        t2.setBackgroundColor(getResources().getColor(R.color.white));
 
         t3.setTextColor(getResources().getColor(colorRefList[currentColors.get(2)]));
-        t3.setBackgroundColor(getResources().getColor(antiColorRefList[currentColors.get(2)]));
+        //t3.setBackgroundColor(getResources().getColor(antiColorRefList[currentColors.get(2)]));
+        t3.setBackgroundColor(getResources().getColor(R.color.white));
 
         t4.setTextColor(getResources().getColor(colorRefList[currentColors.get(3)]));
-        t4.setBackgroundColor(getResources().getColor(antiColorRefList[currentColors.get(3)]));
-
+        //t4.setBackgroundColor(getResources().getColor(antiColorRefList[currentColors.get(3)]));
+        t4.setBackgroundColor(getResources().getColor(R.color.white));
     }
 
 
