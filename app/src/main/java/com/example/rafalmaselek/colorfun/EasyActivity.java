@@ -115,6 +115,10 @@ public class EasyActivity extends Activity
         totalRandoms ++;
         if(currentSolution == t.getText())
             result +=1;
+        else {
+            if (result > 0)
+                result -= 1;
+        }
         //  System.out.println("result = "+ result);
         randomizeColors();
     }
