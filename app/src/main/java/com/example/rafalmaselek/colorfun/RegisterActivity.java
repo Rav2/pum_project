@@ -26,7 +26,7 @@ public class RegisterActivity extends Activity {
         Bundle extras = getIntent().getExtras();
         if (extras != null) {
             username = extras.getString("USERNAME");
-            Log.i("username: ", username);
+            //Log.i("username: ", username);
             nameEditText.setText(username);
 
 
@@ -87,6 +87,19 @@ public class RegisterActivity extends Activity {
 
 
 
+    }
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+
+        this.finish();
+
+
+    }
+    @Override
+    protected void onStop() {
+        super.onStop();
+        this.finish();
     }
 
 

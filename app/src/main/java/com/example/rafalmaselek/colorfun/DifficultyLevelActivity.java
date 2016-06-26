@@ -48,6 +48,8 @@ public class DifficultyLevelActivity extends Activity
         startActivity(hardGame);
     }
 
+
+
 //    class LoginProgressTask extends AsyncTask<String, Integer, Boolean> {
 //        @Override
 //        protected Boolean doInBackground(String... params) {

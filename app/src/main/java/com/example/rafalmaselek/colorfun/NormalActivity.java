@@ -109,6 +109,24 @@ public class NormalActivity extends Activity
 
     }
 
+    @Override
+    public void onBackPressed(){
+        mCountDownTimer.cancel();
+        super.onBackPressed();
+        this.onDestroy();
+
+
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+
+        finish();
+
+
+    }
+
     public void nextQuestion(View view)
     {
         TextView t = (TextView)view;

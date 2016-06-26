@@ -38,7 +38,7 @@ public class ResultsActivity extends Activity  {
 
     public void playAgain(View view){
         Intent levelIntent = new Intent(this, DifficultyLevelActivity.class);
-        levelIntent.putExtra("USERNAME",username);
+        levelIntent.putExtra("USERNAME", username);
         startActivity(levelIntent);
     }
 
@@ -48,7 +48,13 @@ public class ResultsActivity extends Activity  {
         startActivity(exitIntent);
     }
 
+    @Override
+    public void onBackPressed(){
+        super.onBackPressed();
+        Intent intent = new Intent(this, DifficultyLevelActivity.class);
+        startActivity(intent);
 
+    }
 
 
 

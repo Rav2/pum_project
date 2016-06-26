@@ -17,7 +17,7 @@ public class MainActivity extends Activity
         Bundle extras = getIntent().getExtras();
         if (extras != null) {
             username = extras.getString("USERNAME");
-            Log.i("username: ", username);
+            //Log.i("username: ", username);
 
 
         }
@@ -43,4 +43,6 @@ public class MainActivity extends Activity
         finish();
         System.exit(0);
     }
+
+
 }

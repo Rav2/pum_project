@@ -38,23 +38,22 @@
 
 
         />
+            <EditText
+                android:layout_toRightOf="@+id/resulttextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:clickable="false"
+                android:cursorVisible="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:background="@android:color/transparent"
+                android:textAlignment="textStart"
+                android:textSize="12pt"
+                android:id="@+id/resultEditText"
+                android:text="result"
 
-    <EditText
-        android:layout_toRightOf="@+id/resulttextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="number"
-        android:clickable="false"
-        android:cursorVisible="false"
-        android:focusable="false"
-        android:focusableInTouchMode="false"
-        android:background="@android:color/transparent"
-        android:textAlignment="textStart"
-        android:textSize="12pt"
-        android:id="@+id/resultEditText"
-        android:text="result"
-
-        android:layout_alignParentTop="true"/>
+                android:layout_alignParentTop="true"/>
         </RelativeLayout>
 
 
