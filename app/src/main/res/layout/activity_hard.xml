@@ -76,7 +76,7 @@
                 android:layout_weight=".47"
                 android:layout_height="wrap_content"
                 android:background="@color/white"
-                android:textSize="14pt"
+                android:textSize="10pt"
                 android:text="1"
                 android:id="@+id/answ1"
                 android:onClick="nextQuestion"/>
@@ -99,7 +99,7 @@
                 android:layout_weight=".47"
                 android:layout_height="wrap_content"
                 android:background="@color/white"
-                android:textSize="14pt"
+                android:textSize="10pt"
                 android:text="2"
                 android:id="@+id/answ2"
                 android:onClick="nextQuestion"/>
@@ -167,7 +167,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:background="@color/white"
-                android:textSize="14pt"
+                android:textSize="10pt"
                 android:layout_weight=".47"
                 android:text="3"
                 android:id="@+id/answ3"
@@ -191,7 +191,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight=".47"
                 android:background="@color/white"
-                android:textSize="14pt"
+                android:textSize="10pt"
                 android:text="4"
                 android:id="@+id/answ4"
                 android:onClick="nextQuestion"/>
